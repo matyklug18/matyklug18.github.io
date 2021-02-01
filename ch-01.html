@@ -3,10 +3,10 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-02-01 Mon 23:14 -->
+<!-- 2021-02-01 Mon 23:43 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>SICP Book Chapter 1</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Maty Klug" />
 <style type="text/css">
@@ -193,7 +193,7 @@
   .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
-<link rel="stylesheet" href="http://dakrone.github.io/org.css" type="text/css" />
+<link rel="stylesheet" href="https://dakrone.github.io/org.css" type="text/css" />
 <script type="text/javascript">
 // @license magnet:?xt=urn:btih:e95b018ef3580986a04669f1b5879592219e2a7a&dn=public-domain.txt Public Domain
 <!--/*--><![CDATA[/*><!--*/
@@ -219,22 +219,23 @@
 </head>
 <body>
 <div id="content">
+<h1 class="title">SICP Book Chapter 1</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgea33849">1. Building Abstractions with Procedures</a>
+<li><a href="#orgd8c1696">1. Building Abstractions with Procedures</a>
 <ul>
-<li><a href="#orgb09aa35">1.1. The Elements of Programming</a>
+<li><a href="#orgbb3b97e">1.1. The Elements of Programming</a>
 <ul>
-<li><a href="#org14f5f69">1.1.1. Expressions</a></li>
-<li><a href="#org886716a">1.1.2. Naming and the Environment</a></li>
-<li><a href="#orgdae712a">1.1.3. Evaluating Combinations</a></li>
-<li><a href="#orgc461737">1.1.4. Compound Procedures</a></li>
-<li><a href="#org97590e6">1.1.5. The Substitution Model for Procedure Application</a></li>
-<li><a href="#orgeab7688">1.1.6. Conditional Expressions and Predicates</a></li>
-<li><a href="#org26c80a3">1.1.7. Example: Square Roots by Newton's Method</a></li>
-<li><a href="#org38fd3b5">1.1.8. Procedures as Black-Box Abstractions</a></li>
+<li><a href="#org9ee13be">1.1.1. Expressions</a></li>
+<li><a href="#org60c6bbf">1.1.2. Naming and the Environment</a></li>
+<li><a href="#org262feb1">1.1.3. Evaluating Combinations</a></li>
+<li><a href="#org28d8f35">1.1.4. Compound Procedures</a></li>
+<li><a href="#orgc0baf68">1.1.5. The Substitution Model for Procedure Application</a></li>
+<li><a href="#orgf9bae88">1.1.6. Conditional Expressions and Predicates</a></li>
+<li><a href="#orgc44dff4">1.1.7. Example: Square Roots by Newton's Method</a></li>
+<li><a href="#orgece228c">1.1.8. Procedures as Black-Box Abstractions</a></li>
 </ul>
 </li>
 </ul>
@@ -243,8 +244,8 @@
 </div>
 </div>
 
-<div id="outline-container-orgea33849" class="outline-2">
-<h2 id="orgea33849"><span class="section-number-2">1</span> Building Abstractions with Procedures</h2>
+<div id="outline-container-orgd8c1696" class="outline-2">
+<h2 id="orgd8c1696"><span class="section-number-2">1</span> Building Abstractions with Procedures</h2>
 <div class="outline-text-2" id="text-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -323,7 +324,7 @@ constructed, replaced, and debugged separately.
 
 
 <ol class="org-ol">
-<li><a id="org18c3691"></a>Programming in Lisp<br />
+<li><a id="org7d6151a"></a><b>Programming in Lisp</b><br />
 <div class="outline-text-5" id="text-1-0-0-1">
 <p>
 We need an appropriate language for describing processes, and we will
@@ -410,8 +411,8 @@ and beyond these considerations, programming in Lisp is great fun.
 </ol>
 
 
-<div id="outline-container-orgb09aa35" class="outline-3">
-<h3 id="orgb09aa35"><span class="section-number-3">1.1</span> The Elements of Programming</h3>
+<div id="outline-container-orgbb3b97e" class="outline-3">
+<h3 id="orgbb3b97e"><span class="section-number-3">1.1</span> The Elements of Programming</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 A powerful programming language is more than just a means
@@ -456,8 +457,8 @@ to manipulate compound data as well.
 
 
 
-<div id="outline-container-org14f5f69" class="outline-4">
-<h4 id="org14f5f69"><span class="section-number-4">1.1.1</span> Expressions</h4>
+<div id="outline-container-org9ee13be" class="outline-4">
+<h4 id="org9ee13be"><span class="section-number-4">1.1.1</span> Expressions</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 One easy way to get started at programming is to examine some typical
@@ -580,8 +581,8 @@ the value of the expression.<sup><a id="fnr.7" class="footref" href="#fn.7">7</a
 
 
 
-<div id="outline-container-org886716a" class="outline-4">
-<h4 id="org886716a"><span class="section-number-4">1.1.2</span> Naming and the Environment</h4>
+<div id="outline-container-org60c6bbf" class="outline-4">
+<h4 id="org60c6bbf"><span class="section-number-4">1.1.2</span> Naming and the Environment</h4>
 <div class="outline-text-4" id="text-1-1-2">
 <p>
 A critical aspect of a programming language is the means it provides for
@@ -647,8 +648,8 @@ environments).<sup><a id="fnr.9" class="footref" href="#fn.9">9</a></sup>
 </div>
 
 
-<div id="outline-container-orgdae712a" class="outline-4">
-<h4 id="orgdae712a"><span class="section-number-4">1.1.3</span> Evaluating Combinations</h4>
+<div id="outline-container-org262feb1" class="outline-4">
+<h4 id="org262feb1"><span class="section-number-4">1.1.3</span> Evaluating Combinations</h4>
 <div class="outline-text-4" id="text-1-1-3">
 <p>
 One of our goals in this chapter is to
@@ -698,7 +699,7 @@ evaluating
 requires that the evaluation rule be applied to four different
 combinations. We can obtain a picture of this process by
 representing the combination in the form of a
-tree, as shown in figure <a href="#orgcd90cf8">1.1</a>. Each
+tree, as shown in figure <a href="#org287f531">1.1</a>. Each
 combination is represented by a node with
 branches corresponding to the operator and the operands of
 the combination stemming from it. The terminal nodes (that
@@ -714,7 +715,7 @@ kind of process known as <i>tree accumulation</i>.
 
 
 
-<div id="orgcd90cf8" class="figure">
+<div id="org287f531" class="figure">
 <p><img src="ch1-Z-G-1.gif" alt="ch1-Z-G-1.gif" />
 </p>
 </div>
@@ -782,8 +783,8 @@ forms.<sup><a id="fnr.11" class="footref" href="#fn.11">11</a></sup>
 
 
 
-<div id="outline-container-orgc461737" class="outline-4">
-<h4 id="orgc461737"><span class="section-number-4">1.1.4</span> Compound Procedures</h4>
+<div id="outline-container-org28d8f35" class="outline-4">
+<h4 id="org28d8f35"><span class="section-number-4">1.1.4</span> Compound Procedures</h4>
 <div class="outline-text-4" id="text-1-1-4">
 <p>
 We have identified in Lisp some of the elements that must appear in any
@@ -899,14 +900,14 @@ procedure.
 
 
 
-<div id="outline-container-org97590e6" class="outline-4">
-<h4 id="org97590e6"><span class="section-number-4">1.1.5</span> The Substitution Model for Procedure Application</h4>
+<div id="outline-container-orgc0baf68" class="outline-4">
+<h4 id="orgc0baf68"><span class="section-number-4">1.1.5</span> The Substitution Model for Procedure Application</h4>
 <div class="outline-text-4" id="text-1-1-5">
 <p>
  To evaluate a combination whose operator names a compound
 procedure, the interpreter follows much the same process as for
 combinations whose operators name primitive procedures, which we
-described in section <a href="#orgdae712a">1.1.3</a>. That is, the interpreter
+described in section <a href="#org262feb1">1.1.3</a>. That is, the interpreter
 evaluates the elements of the combination and applies the procedure
 (which is the value of the operator of the combination) to the arguments
 (which are the values of the operands of the combination).
@@ -933,7 +934,7 @@ To illustrate this process, let's evaluate the combination
 </p>
 
 <p>
-where <code>f</code> is the procedure defined in section <a href="#orgc461737">1.1.4</a>.
+where <code>f</code> is the procedure defined in section <a href="#org28d8f35">1.1.4</a>.
 We begin by retrieving the body of <code>f</code>:
 </p>
 
@@ -1025,11 +1026,11 @@ application.<sup><a id="fnr.15" class="footref" href="#fn.15">15</a></sup></li>
 
 
 <ol class="org-ol">
-<li><a id="org320b5be"></a>Applicative order versus normal order<br />
+<li><a id="org39daeb5"></a>Applicative order versus normal order<br />
 <div class="outline-text-5" id="text-1-1-5-1">
 <p>
 According to the description of evaluation given in
-section <a href="#orgdae712a">1.1.3</a>, the interpreter first evaluates the
+section <a href="#org262feb1">1.1.3</a>, the interpreter first evaluates the
 operator and operands and then applies the resulting procedure to the
 resulting arguments. This is not the only way to perform evaluation. An
 alternative evaluation model would not evaluate the operands until their
@@ -1083,7 +1084,7 @@ evaluation</i>. It can be shown that, for procedure applications that can
 be modeled using substitution (including all the procedures in the first
 two chapters of this book) and that yield legitimate values,
 normal-order and applicative-order evaluation produce the same value.
-(See exercise <a href="#org0a9db37">1.5</a> for an instance of an ``illegitimate''
+(See exercise <a href="#org829a5b7">1.5</a> for an instance of an ``illegitimate''
 value where normal-order and applicative-order evaluation do not give
 the same result.)
 </p>
@@ -1106,8 +1107,8 @@ investigate some of its implications in chapters 3 and
 
 
 
-<div id="outline-container-orgeab7688" class="outline-4">
-<h4 id="orgeab7688"><span class="section-number-4">1.1.6</span> Conditional Expressions and Predicates</h4>
+<div id="outline-container-orgf9bae88" class="outline-4">
+<h4 id="orgf9bae88"><span class="section-number-4">1.1.6</span> Conditional Expressions and Predicates</h4>
 <div class="outline-text-4" id="text-1-1-6">
 <p>
 The expressive power of the class of procedures that we can define at
@@ -1120,7 +1121,7 @@ different cases according to the rule
 </p>
 
 
-<div id="orgcdcf1fa" class="figure">
+<div id="orgd084435" class="figure">
 <p><img src="ch1-Z-G-2.gif" alt="ch1-Z-G-2.gif" />
 </p>
 </div>
@@ -1303,7 +1304,7 @@ or alternatively as
 </div>
 
 <ol class="org-ol">
-<li><a id="orge0c9b81"></a>Exercise 1.1<br />
+<li><a id="orgcb6a62d"></a>Exercise 1.1<br />
 <div class="outline-text-6" id="text-1-1-6-0-1">
 <p>
 Below is a sequence of expressions. What
@@ -1318,7 +1319,7 @@ presented.
 </div>
 </li>
 
-<li><a id="orga754071"></a>Exercise 1.2<br />
+<li><a id="orgc9f6f14"></a>Exercise 1.2<br />
 <div class="outline-text-6" id="text-1-1-6-0-2">
 <p>
 Translate the following expression into
@@ -1326,14 +1327,14 @@ prefix form
 </p>
 
 
-<div id="org419eb7a" class="figure">
+<div id="orga043efc" class="figure">
 <p><img src="ch1-Z-G-3.gif" alt="ch1-Z-G-3.gif" />
 </p>
 </div>
 </div>
 </li>
 
-<li><a id="orgd9a1585"></a>Exercise 1.3<br />
+<li><a id="org88f4de7"></a>Exercise 1.3<br />
 <div class="outline-text-6" id="text-1-1-6-0-3">
 <p>
 Define a procedure that takes three
@@ -1343,7 +1344,7 @@ larger numbers.
 </div>
 </li>
 
-<li><a id="org935c54c"></a>Exercise 1.4<br />
+<li><a id="org07d3489"></a>Exercise 1.4<br />
 <div class="outline-text-6" id="text-1-1-6-0-4">
 <p>
 Observe that our model of
@@ -1358,7 +1359,7 @@ following procedure:
 </div>
 </li>
 
-<li><a id="org0a9db37"></a>Exercise 1.5<br />
+<li><a id="org829a5b7"></a>Exercise 1.5<br />
 <div class="outline-text-6" id="text-1-1-6-0-5">
 <p>
 Ben Bitdiddle
@@ -1396,8 +1397,8 @@ expression.)
 
 
 
-<div id="outline-container-org26c80a3" class="outline-4">
-<h4 id="org26c80a3"><span class="section-number-4">1.1.7</span> Example: Square Roots by Newton's Method</h4>
+<div id="outline-container-orgc44dff4" class="outline-4">
+<h4 id="orgc44dff4"><span class="section-number-4">1.1.7</span> Example: Square Roots by Newton's Method</h4>
 <div class="outline-text-4" id="text-1-1-7">
 <p>
 Procedures, as introduced above, are much like
@@ -1413,7 +1414,7 @@ can define the square-root function as
 </p>
 
 
-<div id="org2e1eb37" class="figure">
+<div id="org553f023" class="figure">
 <p><img src="ch1-Z-G-4.gif" alt="ch1-Z-G-4.gif" />
 </p>
 </div>
@@ -1607,7 +1608,7 @@ procedure.<sup><a id="fnr.24" class="footref" href="#fn.24">24</a></sup>
 </div>
 
 <ol class="org-ol">
-<li><a id="org89edc7a"></a>Exercise 1.6<br />
+<li><a id="orge797183"></a>Exercise 1.6<br />
 <div class="outline-text-6" id="text-1-1-7-0-1">
 <p>
 Alyssa P.
@@ -1644,7 +1645,7 @@ Explain.
 </div>
 </li>
 
-<li><a id="org304df0d"></a>Exercise 1.7  The <code>good-enough?</code> test used in computing<br />
+<li><a id="org4ba7b7d"></a>Exercise 1.7  The <code>good-enough?</code> test used in computing<br />
 <div class="outline-text-6" id="text-1-1-7-0-2">
 <p>
 square roots will not be very effective for finding the square roots of
@@ -1661,7 +1662,7 @@ small and large numbers?
 </div>
 </li>
 
-<li><a id="org204f0d2"></a>Exercise 1.8<br />
+<li><a id="org448d6b7"></a>Exercise 1.8<br />
 <div class="outline-text-6" id="text-1-1-7-0-3">
 <p>
 Newton's method
@@ -1670,7 +1671,7 @@ the cube root of <i>x</i>, then a better approximation is given by the value
 </p>
 
 
-<div id="org938ab8b" class="figure">
+<div id="org6dedf5f" class="figure">
 <p><img src="ch1-Z-G-5.gif" alt="ch1-Z-G-5.gif" />
 </p>
 </div>
@@ -1689,8 +1690,8 @@ square-root and cube-root procedures.)
 
 
 
-<div id="outline-container-org38fd3b5" class="outline-4">
-<h4 id="org38fd3b5"><span class="section-number-4">1.1.8</span> Procedures as Black-Box Abstractions</h4>
+<div id="outline-container-orgece228c" class="outline-4">
+<h4 id="orgece228c"><span class="section-number-4">1.1.8</span> Procedures as Black-Box Abstractions</h4>
 <div class="outline-text-4" id="text-1-1-8">
 <p>
 <code>Sqrt</code> is our first example of a process defined by a set of mutually
@@ -1711,13 +1712,13 @@ up naturally into a number of subproblems: how to tell whether a guess
 is good enough, how to improve a guess, and so on. Each of these tasks
 is accomplished by a separate procedure. The entire <code>sqrt</code> program can
 be viewed as a cluster of procedures (shown in
-figure <a href="#orgcd71b21">1.2</a>) that mirrors the decomposition of the
+figure <a href="#org2aecea4">1.2</a>) that mirrors the decomposition of the
 problem into subproblems.
 </p>
 
 
 
-<div id="orgcd71b21" class="figure">
+<div id="org2aecea4" class="figure">
 <p><img src="ch1-Z-G-6.gif" alt="ch1-Z-G-6.gif" />
 </p>
 </div>
@@ -1767,7 +1768,7 @@ not need to know how the procedure is implemented in order to use it.
 
 
 <ol class="org-ol">
-<li><a id="org735c1c9"></a>Local names<br />
+<li><a id="org19bf2dc"></a>Local names<br />
 <div class="outline-text-5" id="text-1-1-8-1">
 <p>
 One detail of a procedure's implementation that should not
@@ -1850,7 +1851,7 @@ substitute <code>cos</code> for <code>abs</code> in its definition.
 
 
 
-<li><a id="org7aa7e2d"></a>Internal definitions and block structure<br />
+<li><a id="orgc242a1e"></a>Internal definitions and block structure<br />
 <div class="outline-text-5" id="text-1-1-8-2">
 <p>
 We have one kind of name isolation available to us so far: The formal
@@ -2230,7 +2231,7 @@ the consequences of running programs that intertwine definition and use.
 </div></div>
 <div id="postamble" class="status">
 <p class="author">Author: Maty Klug</p>
-<p class="date">Created: 2021-02-01 Mon 23:14</p>
+<p class="date">Created: 2021-02-01 Mon 23:43</p>
 </div>
 </body>
 </html>
