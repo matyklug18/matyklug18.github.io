@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TreeCordLuaAPIDocs</title>
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+</head>
+
+<body class="stackedit">
+  <div class="stackedit__html"><h1 id="basics">Basics</h1>
+<p>You can listen to events, which are functions that get called when something happens, like this</p>
+<pre class=" language-lua"><code class="prism  language-lua">events<span class="token punctuation">.</span><span class="token function">hook</span><span class="token punctuation">(</span><span class="token string">"message::delete"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> 
+	<span class="token comment">-- Print the Plain Text of the message.</span>
+	<span class="token function">print</span><span class="token punctuation">(</span>event<span class="token punctuation">.</span><span class="token function">getOriginalMessage</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getContent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">getPlainText</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">end</span><span class="token punctuation">)</span>
+</code></pre>
+<h1 id="examples">Examples</h1>
+<h1 id="elements">Elements</h1>
+<h2 id="events"><strong><strong>EVENTS</strong></strong></h2>
+<h3 id="messagesendafter-global"><code>message::send::after</code> <em>(global)</em></h3>
+<h5 id="event-class-aftermessagesentevent">Event Class <code>AfterMessageSentEvent</code></h5>
+<h5 id="description">Description</h5>
+<pre><code>A message was just sent from the user
+</code></pre>
+<h3 id="messagesendbefore-global"><code>message::send::before</code> (<em>global</em>)</h3>
+<h5 id="event-class-beforemessagesentevent">Event Class <code>BeforeMessageSentEvent</code></h5>
+<h5 id="description-1">Description</h5>
+<pre><code>A message is about to be sent from the user
+</code></pre>
+<h3 id="messagerecieve-global"><code>message::recieve</code> (<em>global</em>)</h3>
+<h5 id="event-class-messagerecievedevent">Event Class <code>MessageRecievedEvent</code></h5>
+<h4 id="description-2">Description</h4>
+<pre><code>A message sent by someone else was just recieved
+</code></pre>
+<h3 id="messagedelete-global"><code>message::delete</code> (<em>global</em>)</h3>
+<h5 id="event-class-messagedeletedevent">Event Class <code>MessageDeletedEvent</code></h5>
+<h5 id="description-3">Description</h5>
+<pre><code>A message was just deleted by someone
+</code></pre>
+<h3 id="messageedit-global"><code>message::edit</code> (<em>global</em>)</h3>
+<h5 id="event-class-messageeditedevent">Event Class <code>MessageEditedEvent</code></h5>
+<h5 id="description-4">Description</h5>
+<pre><code>A message was just edited by someone
+</code></pre>
+<h2 id="classes"><strong><strong>CLASSES</strong></strong></h2>
+<h3 id="message"><code>Message</code></h3>
+<h5 id="functions">Functions</h5>
+<ul>
+<li><code>getAuthor()</code>
+<h6 id="returns">Returns</h6>
+<pre><code>  An instance of `User`
+</code></pre>
+<h6 id="description-5">Description</h6>
+<pre><code>  Get the author of the message. 
+</code></pre>
+</li>
+<li><code>getContent()</code>
+<h6 id="returns-1">Returns</h6>
+<pre><code>  An instance of `MessageContent`,
+  containing the Content of the message, like the text or files.
+</code></pre>
+<h6 id="description-6">Description</h6>
+<pre><code>  Get the content of the message. 
+  The content is the text of the message, the files, as well as the embeds.
+</code></pre>
+</li>
+<li><code>getReactions()</code>
+<h6 id="returns-2">Returns</h6>
+<pre><code>  An instance of `ReactionList`,
+  containing the reactions as well as hooks to add/remove them.
+</code></pre>
+<h6 id="description-7">Description</h6>
+<pre><code>  Get the reactions of a message.
+</code></pre>
+</li>
+</ul>
+<h5 id="description-8">Description</h5>
+<pre><code>Parent class of all message classes.
+</code></pre>
+<p>Represents a message, eg. in a channel or in DMs.</p>
+<h3 id="messagesnapshot-message"><code>MessageSnapshot</code> [<em>Message</em>]</h3>
+<h5 id="description-9">Description</h5>
+<pre><code>A read-only snapshot of a message that does not exist anymore.
+</code></pre>
+<h3 id="othermessage-message"><code>OtherMessage</code> [<em>Message</em>]</h3>
+<h5 id="description-10">Description</h5>
+<pre><code>A message sent by someone other than the current user.
+</code></pre>
+<h3 id="selfmessage-message"><code>SelfMessage</code> [<em>Message</em>]</h3>
+<h5 id="description-11">Description</h5>
+<pre><code>A message sent by the current user
+</code></pre>
+<h5 id="functions-1">Functions</h5>
+<ul>
+<li><code>setContent()</code>
+<h6 id="arguments">Arguments</h6>
+<ul>
+<li><code>content</code> (<em><strong>MessageContent</strong></em>) The new content.<br>
+Empty fields will be inherited (taken from) the original message.</li>
+</ul>
+<h6 id="description-12">Description</h6>
+<pre><code>  Edit the message.
+</code></pre>
+</li>
+</ul>
+<h3 id="event"><code>Event</code></h3>
+<h5 id="description-13">Description</h5>
+<pre><code>The superclass of all events.
+</code></pre>
+<h3 id="messageevent-event"><code>MessageEvent</code> [<em>Event</em>]</h3>
+<h5 id="description-14">Description</h5>
+<pre><code>An event that happens when a message changes.
+</code></pre>
+<h3 id="messageeditedevent-messageevent"><code>MessageEditedEvent</code> [<em>MessageEvent</em>]</h3>
+<h5 id="functions-2">Functions</h5>
+<ul>
+<li><code>getOriginalMessage()</code>
+<h6 id="returns-3">Returns</h6>
+<pre><code>  An instance of `MessageSnapshot`, 
+  containing the original message, before it was *Edited*.
+</code></pre>
+<h6 id="description-15">Description</h6>
+<pre><code>  Get the original message, before it was *Edited*.
+</code></pre>
+</li>
+</ul>
+<h5 id="description-16">Description</h5>
+<pre><code>An event that gets fired when a message gets *Edited* using the *Edit* feature of Discord.
+</code></pre>
+<h3 id="messagedeletedevent-messageevent"><code>MessageDeletedEvent</code> [<em>MessageEvent</em>]</h3>
+<h5 id="description-17">Description</h5>
+<pre><code>An event that gets fired when a message gets *Deleted*. 
+</code></pre>
+<h5 id="functions-3">Functions</h5>
+<ul>
+<li><code>getOriginalMessage()</code>
+<h6 id="returns-4">Returns</h6>
+<pre><code>  An instance of `MessageSnapshot`, 
+  containing the original message,
+  before it was *Deleted* using the *Delete* feature of Discord.
+</code></pre>
+<h6 id="description-18">Description</h6>
+<pre><code>  Get the original message, before it was *Deleted*.
+</code></pre>
+</li>
+</ul>
+</div>
+</body>
+
+</html>
